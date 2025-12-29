@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    class Temperature {
+        constructor(celsius) {
+            if(celsius<-273.15) {
+                console.error("Nhiệt độ không thể thấp hơn");
+                this.cenlisus = -273.15;
+            }else{
+                this.celsius = celsius;
+
+            }
+        }
+        getTinhNhietDoK(){
+            return (this.celsius + 273.15).toFixed(2) + " K";
+
+        }
+        getTinhNhietDoF(){
+            return ((this.celsius * 1.8 ) + 32).toFixed(2) +" F";
+
+        }
+
+    }
+    var celsius = new Temperature(32);
+    console.log(celsius.getTinhNhietDoK());
+    console.log(celsius.getTinhNhietDoF());
+
+</script>
+</body>
+</html>
